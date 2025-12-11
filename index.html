@@ -6,72 +6,263 @@
     <title>Pedro Lucas Vergueiro | AI & Backend Developer</title>
     <meta name="description" content="Desenvolvedor AI & Backend especializado em Python, Machine Learning e APIs. Portfólio com projetos reais e demos interativos.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-logo">
-                <span>Pedro<span class="accent">Dev</span></span>
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <span class="brand-text">Pedro<span class="accent">Dev</span></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
             </ul>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary">Contratar Agora</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="floating-elements">
+                <div class="element element-1"></div>
+                <div class="element element-2"></div>
+                <div class="element element-3"></div>
+                <div class="element element-4"></div>
+                <div class="element element-5"></div>
+            </div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Desenvolvedor <span class="gradient-text">AI & Backend</span></h1>
-                <h2>Pedro Lucas Vergueiro</h2>
-                <p>Especialista em Inteligência Artificial e Machine Learning. Transformo ideias em soluções tecnológicas inovadoras.</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Projetos</span>
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-fire"></i>
+                        <span>Disponível para contratação imediata</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label">Tecnologias</span>
+                    <h1 class="hero-title">
+                        Desenvolvedor <span class="gradient-text">AI & Backend</span>
+                        <br>que transforma ideias em realidade
+                    </h1>
+                    <p class="hero-description">
+                        Especialista em <strong>Python</strong>, <strong>Machine Learning</strong> e <strong>APIs</strong>. 
+                        Estudante de Engenharia de Software com paixão por criar soluções inovadoras que impactam negócios.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="12">0</span>
+                            <span class="stat-label">Tecnologias Dominadas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">% Dedicação</span>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Dedicação</span>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary large pulse">
+                            <i class="fas fa-rocket"></i>
+                            Ver Meus Projetos
+                        </a>
+                        <a href="#contact" class="btn btn-secondary large">
+                            <i class="fas fa-handshake"></i>
+                            Vamos Conversar
+                        </a>
                     </div>
                 </div>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary">Contratar</a>
+                <div class="hero-visual">
+                    <div class="profile-container glass-effect">
+                        <div class="profile-image">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                            <div class="profile-ring"></div>
+                            <div class="profile-dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Pedro Lucas Vergueiro</h3>
+                            <p>AI & Backend Developer</p>
+                            <div class="profile-status">
+                                <div class="status-dot"></div>
+                                <span>Disponível para projetos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-preview glass-effect">
+                        <div class="code-header">
+                            <div class="code-controls">
+                                <div class="control red"></div>
+                                <div class="control yellow"></div>
+                                <div class="control green"></div>
+                            </div>
+                            <div class="code-title">ai_developer.py</div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text">
+                                    <span class="keyword">class</span> 
+                                    <span class="class-name">PedroVergueiro</span>:
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="keyword">def</span> 
+                                    <span class="function">__init__</span>(self):
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;self.skills = [
+                                    <span class="string">"Python"</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="string">"Machine Learning"</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="string">"FastAPI"</span>]
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">6</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;self.passion = 
+                                    <span class="string">"Criar soluções inovadoras"</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>Por que me contratar?</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Sobre Mim</span>
+                </div>
+                <h2 class="section-title">Por que me contratar?</h2>
+                <p class="section-subtitle">
+                    Combinação única de conhecimento acadêmico sólido com experiência prática em projetos reais
+                </p>
+            </div>
             <div class="about-grid">
-                <div class="about-card">
-                    <h3>Minha Proposta de Valor</h3>
-                    <p>Como estudante de Engenharia de Software (2º período), ofereço fundamentos acadêmicos sólidos + experiência prática em projetos reais de IA e Backend.</p>
-                    <div class="value-list">
-                        <div class="value-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Mentalidade de Crescimento</h4>
-                                <p>Aprendo rapidamente e me adapto a novas tecnologias</p>
+                <div class="main-card glass-effect interactive-hover">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Minha Proposta de Valor</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            Como estudante de <strong>Engenharia de Software (2º período)</strong>, 
+                            ofereço uma combinação poderosa: fundamentos acadêmicos sólidos + 
+                            experiência prática em projetos reais de IA e Backend.
+                        </p>
+                        <div class="value-list">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Mentalidade de Crescimento</h4>
+                                    <p>Aprendo rapidamente e me adapto a novas tecnologias com facilidade</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Código de Qualidade</h4>
+                                    <p>Clean code e boas práticas desde o primeiro dia de desenvolvimento</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Entrega Rápida</h4>
+                                    <p>Foco em resultados práticos e soluções que agregam valor real</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="value-item">
-                            <i class="fas fa-code"></i>
-                            <div>
-                                <h4>Código de Qualidade</h4>
-                                <p>Clean code e boas práticas desde o primeiro dia</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stats-header">
+                        <h3>Estatísticas</h3>
+                        <p>Números que comprovam minha dedicação</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card glass-effect">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projetos</span>
+                                <span class="stat-desc">Desenvolvidos</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-effect">
+                            <div class="stat-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Commits</span>
+                                <span class="stat-desc">No GitHub</span>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-effect">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Horas</span>
+                                <span class="stat-desc">Programando</span>
                             </div>
                         </div>
                     </div>
@@ -80,113 +271,475 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projetos em Destaque</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Meus Projetos</span>
+                </div>
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="section-subtitle">
+                    Soluções reais desenvolvidas com tecnologias modernas e boas práticas
+                </p>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-brain"></i>
+                <!-- Sentiment Analysis Project -->
+                <div class="project-card glass-effect interactive-hover featured">
+                    <div class="project-header">
+                        <div class="project-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Destaque</span>
+                        </div>
+                        <div class="project-tech-icons">
+                            <i class="fab fa-python" title="Python"></i>
+                            <i class="fas fa-brain" title="Machine Learning"></i>
+                            <i class="fas fa-api" title="FastAPI"></i>
+                        </div>
                     </div>
-                    <h3>Sentiment Analysis API</h3>
-                    <p>Sistema de análise de sentimentos usando NLP e Machine Learning para processamento de linguagem natural em tempo real.</p>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="project-title">Sentiment Analysis API</h3>
+                        <p class="project-description">
+                            API avançada de análise de sentimentos usando NLP e Machine Learning. 
+                            Processa linguagem natural em tempo real com alta precisão.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Processamento em tempo real</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Suporte a múltiplos idiomas</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>API RESTful completa</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-demo">
-                        <textarea id="sentiment-input" placeholder="Digite um texto para analisar...">Estou muito feliz com este projeto!</textarea>
-                        <button onclick="analyzeSentiment()" class="demo-btn">Analisar Sentimento</button>
-                        <div id="sentiment-result" class="demo-result"></div>
+                        <div class="demo-header">
+                            <i class="fas fa-play"></i>
+                            <span>Demo Interativo</span>
+                        </div>
+                        <div class="demo-content">
+                            <textarea id="sentiment-input" placeholder="Digite um texto para analisar o sentimento...">Estou muito feliz com este projeto incrível!</textarea>
+                            <button onclick="analyzeSentiment()" class="demo-btn">
+                                <i class="fas fa-brain"></i>
+                                Analisar Sentimento
+                            </button>
+                            <div id="sentiment-result" class="demo-result"></div>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>NLP</span>
-                        <span>ML</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/pedrovergueiro" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/pedrovergueiro/sentiment-analysis-fastapi" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Código
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-film"></i>
+                <!-- Movie Recommender Project -->
+                <div class="project-card glass-effect interactive-hover">
+                    <div class="project-header">
+                        <div class="project-badge">
+                            <i class="fas fa-fire"></i>
+                            <span>Popular</span>
+                        </div>
+                        <div class="project-tech-icons">
+                            <i class="fab fa-python" title="Python"></i>
+                            <i class="fas fa-chart-line" title="Data Science"></i>
+                            <i class="fas fa-database" title="Pandas"></i>
+                        </div>
                     </div>
-                    <h3>Recomendador de Filmes ML</h3>
-                    <p>Sistema inteligente de recomendação usando algoritmos de Machine Learning para sugestões personalizadas.</p>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="project-title">Sistema de Recomendação ML</h3>
+                        <p class="project-description">
+                            Sistema inteligente de recomendação de filmes usando algoritmos de Machine Learning 
+                            para sugestões personalizadas baseadas em preferências do usuário.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Algoritmos de filtragem colaborativa</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Análise de similaridade</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Interface intuitiva</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-demo">
-                        <select id="movie-genre">
-                            <option value="">Selecione um gênero</option>
-                            <option value="action">Ação</option>
-                            <option value="comedy">Comédia</option>
-                            <option value="drama">Drama</option>
-                            <option value="scifi">Ficção Científica</option>
-                        </select>
-                        <button onclick="recommendMovies()" class="demo-btn">Recomendar</button>
-                        <div id="movie-recommendations" class="demo-result"></div>
+                        <div class="demo-header">
+                            <i class="fas fa-play"></i>
+                            <span>Demo Interativo</span>
+                        </div>
+                        <div class="demo-content">
+                            <select id="movie-genre">
+                                <option value="">Selecione um gênero</option>
+                                <option value="action">Ação</option>
+                                <option value="comedy">Comédia</option>
+                                <option value="drama">Drama</option>
+                                <option value="scifi">Ficção Científica</option>
+                                <option value="horror">Terror</option>
+                            </select>
+                            <button onclick="recommendMovies()" class="demo-btn">
+                                <i class="fas fa-magic"></i>
+                                Recomendar Filmes
+                            </button>
+                            <div id="movie-recommendations" class="demo-result"></div>
+                        </div>
                     </div>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Scikit-Learn</span>
-                        <span>Pandas</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/pedrovergueiro" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/pedrovergueiro/recomendador-filmes-ml" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Código
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-university"></i>
+                <!-- Banking System Project -->
+                <div class="project-card glass-effect interactive-hover">
+                    <div class="project-header">
+                        <div class="project-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Seguro</span>
+                        </div>
+                        <div class="project-tech-icons">
+                            <i class="fab fa-python" title="Python"></i>
+                            <i class="fas fa-object-group" title="OOP"></i>
+                            <i class="fas fa-lock" title="Security"></i>
+                        </div>
                     </div>
-                    <h3>Sistema Bancário</h3>
-                    <p>Sistema bancário com funcionalidades de depósito, saque e extrato, demonstrando lógica de programação sólida.</p>
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="project-title">Sistema Bancário Avançado</h3>
+                        <p class="project-description">
+                            Sistema bancário completo com funcionalidades de depósito, saque, extrato e 
+                            validações de segurança. Demonstra domínio de lógica de programação e OOP.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Validações de segurança</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Histórico de transações</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Interface responsiva</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-demo">
-                        <div class="bank-display">
-                            <span>Saldo: R$ <span id="balance">1000.00</span></span>
+                        <div class="demo-header">
+                            <i class="fas fa-play"></i>
+                            <span>Demo Interativo</span>
                         </div>
-                        <input type="number" id="amount" placeholder="Valor" min="0" step="0.01">
-                        <div class="bank-buttons">
-                            <button onclick="deposit()" class="demo-btn">Depositar</button>
-                            <button onclick="withdraw()" class="demo-btn">Sacar</button>
+                        <div class="demo-content">
+                            <div class="bank-display">
+                                <div class="balance-info">
+                                    <span class="balance-label">Saldo Atual</span>
+                                    <span class="balance-value">R$ <span id="balance">1.000,00</span></span>
+                                </div>
+                            </div>
+                            <div class="bank-controls">
+                                <input type="number" id="amount" placeholder="Digite o valor" min="0" step="0.01">
+                                <div class="bank-buttons">
+                                    <button onclick="deposit()" class="demo-btn deposit">
+                                        <i class="fas fa-plus"></i>
+                                        Depositar
+                                    </button>
+                                    <button onclick="withdraw()" class="demo-btn withdraw">
+                                        <i class="fas fa-minus"></i>
+                                        Sacar
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="bank-result" class="demo-result"></div>
                         </div>
-                        <div id="bank-result" class="demo-result"></div>
                     </div>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>OOP</span>
-                        <span>Logic</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Logic</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/pedrovergueiro" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/pedrovergueiro/sistema-bancario-simples-DesafioDIO" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Código
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-tools"></i>
+                    <span>Tecnologias</span>
+                </div>
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <p class="section-subtitle">
+                    Tecnologias que domino e uso para criar soluções inovadoras
+                </p>
+            </div>
+            <div class="tech-showcase">
+                <div class="tech-grid">
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>Linguagem principal para desenvolvimento backend e machine learning</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 85%"></div>
+                            </div>
+                            <span>Intermediário</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                        <p>Algoritmos de ML, análise de dados e inteligência artificial</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                            <span>Intermediário</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>FastAPI</h3>
+                        <p>Framework moderno para criação de APIs rápidas e eficientes</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 80%"></div>
+                            </div>
+                            <span>Intermediário</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3>Git & GitHub</h3>
+                        <p>Controle de versão e colaboração em projetos de desenvolvimento</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                            <span>Intermediário</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Pandas & NumPy</h3>
+                        <p>Manipulação e análise de dados para projetos de ciência de dados</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 70%"></div>
+                            </div>
+                            <span>Básico</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-effect interactive-hover">
+                        <div class="tech-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3 e JavaScript para interfaces modernas e responsivas</p>
+                        <div class="tech-level">
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                            <span>Básico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Vamos trabalhar juntos?</h2>
-            <p>Desenvolvedor júnior com mentalidade sênior - Disponível imediatamente</p>
+            <div class="section-header">
+                <div class="section-badge urgent">
+                    <i class="fas fa-rocket"></i>
+                    <span>Disponível Agora</span>
+                </div>
+                <h2 class="section-title">Vamos trabalhar juntos?</h2>
+                <p class="section-subtitle">
+                    Desenvolvedor júnior com mentalidade sênior - Pronto para agregar valor ao seu time
+                </p>
+            </div>
             
             <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Entre em Contato</h3>
+                <div class="contact-card glass-effect">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Entre em Contato</h3>
+                    </div>
+                    <p>Estou sempre aberto a novas oportunidades e desafios. Vamos conversar sobre como posso contribuir para o sucesso do seu projeto!</p>
+                    
+                    <div class="value-propositions">
+                        <div class="proposition">
+                            <i class="fas fa-zap"></i>
+                            <div>
+                                <h4>Resposta Rápida</h4>
+                                <p>Retorno em até 2 horas durante horário comercial</p>
+                            </div>
+                        </div>
+                        <div class="proposition">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Paixão por Código</h4>
+                                <p>Desenvolvedor que ama o que faz e busca excelência</p>
+                            </div>
+                        </div>
+                        <div class="proposition">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Crescimento Contínuo</h4>
+                                <p>Sempre aprendendo e evoluindo tecnicamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="urgency-banner">
+                        <i class="fas fa-fire"></i>
+                        <span><strong>Disponível imediatamente</strong> para novos projetos!</span>
+                    </div>
+                </div>
+
+                <div class="contact-methods">
+                    <h3>Formas de Contato</h3>
                     <div class="contact-buttons">
-                        <a href="mailto:pedrolv.fsilva@gmail.com" class="contact-btn">
+                        <a href="mailto:pedrolv.fsilva@gmail.com" class="contact-btn primary">
                             <i class="fas fa-envelope"></i>
-                            <span>pedrolv.fsilva@gmail.com</span>
+                            <div>
+                                <span class="btn-title">Email</span>
+                                <span class="btn-subtitle">pedrolv.fsilva@gmail.com</span>
+                            </div>
                         </a>
-                        <a href="https://www.linkedin.com/in/pedro-lucas-vergueiro-675056255/" target="_blank" class="contact-btn">
+                        <a href="https://www.linkedin.com/in/pedro-lucas-vergueiro-675056255/" target="_blank" class="contact-btn linkedin">
                             <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
+                            <div>
+                                <span class="btn-title">LinkedIn</span>
+                                <span class="btn-subtitle">Vamos nos conectar</span>
+                            </div>
                         </a>
-                        <a href="https://wa.me/5535984029757" target="_blank" class="contact-btn">
+                        <a href="https://wa.me/5535984029757" target="_blank" class="contact-btn whatsapp">
                             <i class="fab fa-whatsapp"></i>
-                            <span>(35) 98402-9757</span>
+                            <div>
+                                <span class="btn-title">WhatsApp</span>
+                                <span class="btn-subtitle">(35) 98402-9757</span>
+                            </div>
                         </a>
-                        <a href="https://github.com/pedrovergueiro" target="_blank" class="contact-btn">
+                        <a href="https://github.com/pedrovergueiro" target="_blank" class="contact-btn github">
                             <i class="fab fa-github"></i>
-                            <span>GitHub</span>
+                            <div>
+                                <span class="btn-title">GitHub</span>
+                                <span class="btn-subtitle">Veja meus projetos</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="why-hire">
+                        <h3>Por que me contratar?</h3>
+                        <div class="reasons">
+                            <div class="reason">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <h4>Entrega Rápida</h4>
+                                    <p>Foco em resultados e prazos cumpridos</p>
+                                </div>
+                            </div>
+                            <div class="reason">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h4>Soluções Criativas</h4>
+                                    <p>Abordagem inovadora para resolver problemas</p>
+                                </div>
+                            </div>
+                            <div class="reason">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Trabalho em Equipe</h4>
+                                    <p>Colaborativo e comunicativo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="final-cta glass-effect">
+                <div class="cta-content">
+                    <h3>Pronto para começar?</h3>
+                    <p>Vamos transformar suas ideias em soluções tecnológicas inovadoras!</p>
+                    <div class="cta-actions">
+                        <a href="mailto:pedrolv.fsilva@gmail.com" class="btn btn-primary large pulse">
+                            <i class="fas fa-rocket"></i>
+                            Contratar Agora
+                        </a>
+                        <a href="https://wa.me/5535984029757" target="_blank" class="btn btn-secondary large">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
                         </a>
                     </div>
                 </div>
@@ -194,9 +747,40 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Pedro Lucas Vergueiro. Desenvolvendo o futuro da IA 🤖</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span>Pedro<span class="accent">Dev</span></span>
+                    </div>
+                    <p>Desenvolvedor AI & Backend apaixonado por criar soluções inovadoras.</p>
+                    <p class="footer-tagline">Transformando ideias em realidade através da tecnologia.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="https://github.com/pedrovergueiro" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pedro-lucas-vergueiro-675056255/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/5535984029757" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:pedrolv.fsilva@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Pedro Lucas Vergueiro. Desenvolvendo o futuro da IA 🤖</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
