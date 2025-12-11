@@ -438,11 +438,61 @@ body::before {
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 24px;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
     color: #ffffff;
+    text-shadow: 
+        0 0 20px rgba(99, 102, 241, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.1) 0%, 
+        transparent 30%, 
+        transparent 70%, 
+        rgba(139, 92, 246, 0.1) 100%);
+    animation: titleShimmer 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes titleShimmer {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.scan-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(99, 102, 241, 0.03) 2px,
+        rgba(99, 102, 241, 0.03) 4px
+    );
+    animation: scanMove 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes scanMove {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
 }
 
 .hero-description {
@@ -485,16 +535,62 @@ body::before {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
+}
+
+.hologram-effect {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(99, 102, 241, 0.05) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(139, 92, 246, 0.05) 50%, transparent 70%);
+    border-radius: 50%;
+    animation: hologramSpin 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes hologramSpin {
+    from {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+        transform: rotate(180deg) scale(1.1);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.3;
+    }
 }
 
 .profile-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 32px;
+    background: 
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%),
+        linear-gradient(225deg, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    padding: 40px;
     text-align: center;
     position: relative;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset,
+        0 0 50px rgba(99, 102, 241, 0.1);
+    transition: all 0.4s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.3) inset,
+        0 0 80px rgba(99, 102, 241, 0.2);
 }
 
 .profile-image {
@@ -503,18 +599,77 @@ body::before {
 }
 
 .profile-avatar {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    color: #ffffff;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    overflow: hidden;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 4px;
+    box-shadow: 
+        0 0 30px rgba(99, 102, 241, 0.5),
+        0 0 60px rgba(99, 102, 241, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.1) 0%, 
+        transparent 30%, 
+        transparent 70%, 
+        rgba(139, 92, 246, 0.1) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.profile-avatar:hover .profile-photo {
+    transform: scale(1.05);
+}
+
+.profile-avatar:hover .profile-overlay {
+    opacity: 1;
+}
+
+.profile-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: profilePulse 3s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes profilePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .profile-ring {
@@ -569,6 +724,90 @@ body::before {
     top: 50%;
     right: 10px;
     animation-delay: 1.4s;
+}
+
+.dot-4 {
+    bottom: 30px;
+    right: 30px;
+    animation-delay: 2.1s;
+    background: #8b5cf6;
+}
+
+.dot-5 {
+    top: 30px;
+    left: 30px;
+    animation-delay: 2.8s;
+    background: #06b6d4;
+}
+
+.dot-6 {
+    bottom: 50%;
+    left: 10px;
+    animation-delay: 3.5s;
+    background: #10b981;
+}
+
+.profile-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(99, 102, 241, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle-1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+    background: rgba(99, 102, 241, 0.8);
+}
+
+.particle-2 {
+    top: 60%;
+    right: 25%;
+    animation-delay: 2s;
+    background: rgba(139, 92, 246, 0.8);
+}
+
+.particle-3 {
+    bottom: 30%;
+    left: 30%;
+    animation-delay: 4s;
+    background: rgba(6, 182, 212, 0.8);
+}
+
+.particle-4 {
+    top: 40%;
+    right: 15%;
+    animation-delay: 6s;
+    background: rgba(16, 185, 129, 0.8);
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(-10px) translateX(5px) scale(1.2);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) translateX(-5px) scale(0.8);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-10px) translateX(8px) scale(1.1);
+        opacity: 0.9;
+    }
 }
 
 .profile-info h3 {
