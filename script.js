@@ -585,19 +585,20 @@ document.addEventListener('keydown', (e) => {
         
         // Show special message
         const message = document.createElement('div');
-        message.innerHTML = '🎉 Konami Code ativado! Você encontrou o easter egg! 🚀';
+        message.innerHTML = '🎉 Konami Code ativado! Você encontrou o easter egg do estudante! 🌱';
         message.style.cssText = `
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             padding: 20px;
             border-radius: 12px;
             z-index: 10000;
             font-weight: 600;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+            text-align: center;
         `;
         document.body.appendChild(message);
         
@@ -610,4 +611,5 @@ document.addEventListener('keydown', (e) => {
 });
 
 console.log('🚀 Portfolio Pedro Vergueiro carregado com sucesso! Desenvolvido com ❤️ e muita dedicação.');
+console.log('🌱 Estudante em busca da primeira oportunidade como desenvolvedor!');
 console.log('💡 Dica: Tente o Konami Code para uma surpresa! ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️BA');

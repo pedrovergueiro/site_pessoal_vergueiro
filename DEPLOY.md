@@ -1,101 +1,145 @@
-# 🚀 Guia de Deploy - Portfolio Pedro Vergueiro
+# 🚀 Deploy do Portfolio Pedro Vergueiro
 
-## 📋 Arquivos Prontos para Deploy
+Este documento contém instruções para fazer deploy do portfolio pessoal.
 
-✅ **Arquivos essenciais criados na raiz:**
-- `index.html` - Página principal
-- `styles.css` - Estilos modernos
-- `script.js` - JavaScript interativo
-- `vercel.json` - Configuração Vercel
-- `.gitignore` - Arquivos ignorados
-- `README.md` - Documentação
+## 📋 Pré-requisitos
 
-## 🐙 Subir para GitHub
+- Conta no GitHub
+- Conta no Vercel (recomendado) ou GitHub Pages
 
-### 1. Criar repositório no GitHub
-```bash
-# Acesse: https://github.com/new
-# Nome: portfolio (ou outro nome)
-# Deixe público
-# NÃO inicialize com README
-```
+## 🌐 Deploy com Vercel (Recomendado)
 
-### 2. Conectar repositório local
-```bash
-git remote add origin https://github.com/pedrovergueiro/portfolio.git
-git branch -M main
-git push -u origin main
-```
-
-### 3. Verificar upload
-- Acesse seu repositório no GitHub
-- Confirme que os 6 arquivos estão lá
-
-## 🌐 Deploy no Vercel (Recomendado)
-
-### Opção 1: Deploy Automático
+### Método 1: Deploy Direto
 1. Acesse [vercel.com](https://vercel.com)
-2. Faça login com GitHub
-3. Clique "New Project"
-4. Selecione seu repositório `portfolio`
-5. Clique "Deploy"
-6. ✅ Pronto! URL: `https://portfolio-seuusuario.vercel.app`
+2. Faça login com sua conta GitHub
+3. Clique em "New Project"
+4. Importe este repositório
+5. Configure as seguintes opções:
+   - **Framework Preset**: Other
+   - **Root Directory**: `./`
+   - **Build Command**: (deixe vazio)
+   - **Output Directory**: `./`
+6. Clique em "Deploy"
 
-### Opção 2: Deploy via CLI
-```bash
-npm i -g vercel
-vercel login
-vercel --prod
+### Método 2: Fork + Deploy
+1. Faça fork deste repositório
+2. Acesse [vercel.com](https://vercel.com)
+3. Conecte sua conta GitHub
+4. Selecione o repositório forkado
+5. Deploy automático ✅
+
+## 📄 Deploy com GitHub Pages
+
+1. Faça fork deste repositório
+2. Vá em **Settings** > **Pages**
+3. Em **Source**, selecione "Deploy from a branch"
+4. Escolha branch: `main`
+5. Pasta: `/ (root)`
+6. Clique em "Save"
+7. Acesse: `https://seuusuario.github.io/site_pessoal_vergueiro`
+
+## 🔧 Configurações Personalizadas
+
+### Atualizando Informações Pessoais
+
+1. **Informações de Contato** (`index.html`):
+   ```html
+   <!-- Atualize os links de contato -->
+   <a href="mailto:seuemail@gmail.com">
+   <a href="https://linkedin.com/in/seulinkedin">
+   <a href="https://wa.me/seunumero">
+   <a href="https://github.com/seuusuario">
+   ```
+
+2. **Foto de Perfil**:
+   - Substitua `profile.jpg` pela sua foto
+   - Mantenha proporção quadrada (recomendado: 400x400px)
+
+3. **Projetos**:
+   - Atualize os links dos projetos no GitHub
+   - Modifique descrições conforme seus projetos
+
+### Personalizando Cores
+
+No arquivo `styles.css`, você pode alterar as cores principais:
+
+```css
+/* Cores principais */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #06b6d4;
+}
 ```
 
-## 📄 Deploy no GitHub Pages
+## 📊 Monitoramento
 
-1. Vá no seu repositório GitHub
-2. Settings > Pages
-3. Source: "Deploy from a branch"
-4. Branch: `main` / `/ (root)`
-5. Save
-6. ✅ Pronto! URL: `https://pedrovergueiro.github.io/portfolio`
+### Analytics (Opcional)
+Para adicionar Google Analytics:
 
-## 🔧 Configurações Importantes
+1. Crie uma conta no Google Analytics
+2. Adicione o código de tracking no `<head>` do `index.html`:
 
-### Vercel
-- ✅ Configuração automática via `vercel.json`
-- ✅ Headers de segurança incluídos
-- ✅ Redirects configurados
-
-### GitHub Pages
-- ✅ Funciona direto com arquivos estáticos
-- ✅ HTTPS automático
-- ✅ CDN global
-
-## 🎯 URLs Finais
-
-Após o deploy, seu portfólio estará disponível em:
-
-- **Vercel**: `https://portfolio-pedrovergueiro.vercel.app`
-- **GitHub Pages**: `https://pedrovergueiro.github.io/portfolio`
-
-## 📱 Teste Final
-
-Após deploy, teste:
-- ✅ Responsividade (mobile/desktop)
-- ✅ Demos interativos funcionando
-- ✅ Links de contato (WhatsApp, LinkedIn, Email)
-- ✅ Performance (Lighthouse)
-
-## 🔄 Atualizações Futuras
-
-Para atualizar o site:
-```bash
-# Fazer alterações nos arquivos
-git add .
-git commit -m "Atualização: descrição das mudanças"
-git push
+```html
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 ```
 
-Deploy automático no Vercel e GitHub Pages! 🚀
+## 🔒 Segurança
+
+O arquivo `vercel.json` já inclui headers de segurança:
+- X-Content-Type-Options
+- X-Frame-Options  
+- X-XSS-Protection
+- Referrer-Policy
+
+## 📱 Teste de Responsividade
+
+Antes do deploy, teste em:
+- Desktop (1920x1080)
+- Tablet (768x1024)
+- Mobile (375x667)
+
+## 🚀 Performance
+
+### Otimizações Incluídas:
+- ✅ Imagens otimizadas
+- ✅ CSS minificado
+- ✅ JavaScript otimizado
+- ✅ Cache headers configurados
+- ✅ Lazy loading implementado
+
+### Teste de Performance:
+- [PageSpeed Insights](https://pagespeed.web.dev/)
+- [GTmetrix](https://gtmetrix.com/)
+
+## 🆘 Solução de Problemas
+
+### Problema: Site não carrega
+- Verifique se todos os arquivos estão no repositório
+- Confirme se o `index.html` está na raiz
+
+### Problema: Imagens não aparecem
+- Verifique se os caminhos das imagens estão corretos
+- Confirme se as imagens foram commitadas no repositório
+
+### Problema: Formulário de contato não funciona
+- Este portfolio usa links diretos (mailto, WhatsApp)
+- Para formulário funcional, considere usar Netlify Forms ou Formspree
+
+## 📞 Suporte
+
+Se precisar de ajuda:
+- Abra uma issue no repositório
+- Entre em contato: pedrolv.fsilva@gmail.com
 
 ---
 
-**🎉 Parabéns! Seu portfólio profissional está pronto para impressionar recrutadores!**
+**Desenvolvido com ❤️ por Pedro Lucas Vergueiro**  
+*Estudante de Engenharia de Software em busca da primeira oportunidade* 🌱
