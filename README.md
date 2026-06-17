@@ -1,8 +1,8 @@
 # Site Pessoal
 
-Meu site pessoal, desenvolvido pra ter uma presença online e apresentar meus projetos de forma organizada.
+Meu site pessoal. Simples, direto, sem framework — só HTML, CSS e um pouco de JavaScript.
 
-Foi um dos primeiros projetos em que me preocupei com design além de funcionalidade. Ainda é bem simples, mas foi um passo importante pra entender os fundamentos do frontend.
+Fiz pra ter um lugar pra apresentar quem sou e o que faço, sem depender de plataformas de terceiros. Aprendi que construir algo simples do zero ainda exige decisões de design que não são triviais — cor, tipografia, hierarquia de informação.
 
 ## Stack
 HTML · CSS · JavaScript
